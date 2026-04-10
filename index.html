@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./backend/style.css">
+</head>
+<body>
+      <div class="container">
+    <div class="app-card">
+
+      <div class="app-header">
+        <h1>✅ To-Do App</h1>
+        <p>Apne kaam organized rakho</p>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-num total" id="total">0</div>
+          <div class="stat-label">Total</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num done" id="done">0</div>
+          <div class="stat-label">Done</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num pend" id="pending">0</div>
+          <div class="stat-label">Pending</div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <input type="text" placeholder="Nayi task likho..." id="inputTask" onkeydown="if(event.key==='Enter') addTask()">
+        <button class="add-btn" onclick="addTask()">+ Add</button>
+      </div>
+
+      <div class="task-list-wrap">
+        <div class="empty-state" id="emptyMsg">
+          <div class="empty-icon">📋</div>
+          Koi task nahi. Upar likho aur add karo!
+        </div>
+        <ul id="taskList"></ul>
+      </div>
+      
+    </div>
+  </div>
+  <script src="./backend/script.js"></script>
+</body>
+</html>
